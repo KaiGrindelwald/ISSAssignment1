@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Blogs</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Assignment1.css">
+    <link rel="stylesheet" href="Assignment1dark.css" id="dark-theme-stylesheet">
+    <style>
+        /* Inline CSS for demonstration - Ensure your main CSS in Assignment1.css */
+        .blog-post { margin-bottom: 20px; }
+        .like-button, .comment-btn { cursor: pointer; }
+        .comments-container { margin-top: 10px; }
+    </style>
+</head>
+<body>
+<div class="section" id="Blogs">
+    <h2 class="blogs-title">Blogs</h2>
+    <div class="blog-posts-container">
+        <article class="blog-post" data-blog-id="1">
+            <h3>My Latest Project</h3>
+            <p>Discussing the challenges and learnings from my latest project...</p>
+            <a class="read-more-btn" href="Blog1.html" target="_blank" rel="noopener noreferrer">Read more</a>
+            <button class="like-button">Like</span></button>
+            <div class="comments-container" id="comments-container-blog1"></div>
+        </article>
+        <article class="blog-post" data-blog-id="2">
+            <h3>Introduction to Web Development</h3>
+            <p>A beginner's guide to starting out in web development, covering the basics...</p>
+            <a class="read-more-btn" href="Blog2.html" target="_blank" rel="noopener noreferrer">Read more</a>
+            <button class="like-button">Like</span></button>
+            <div class="comments-container" id="comments-container-blog2"></div>
+        </article>
+    </div>
+</div>
+
+<script src="Assignment1.js"></script>
+</body>
+</html>

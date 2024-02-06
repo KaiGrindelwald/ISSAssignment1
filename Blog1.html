@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Impressive Blog</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 2rem;
+        }
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+        .blog-post {
+            background-color: #fff;
+            margin: 20px;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+        }
+        .blog-title {
+            font-size: 1.5rem;
+            font-weight: bold;
+            margin-bottom: 0.5rem;
+        }
+        .blog-meta {
+            color: #777;
+            font-size: 0.9rem;
+        }
+        .blog-content {
+            margin-top: 1rem;
+            line-height: 1.6;
+        }
+        .comment-section {
+            background-color: #f9f9f9;
+            padding: 20px;
+            margin-top: 40px;
+            border-radius: 8px;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+        }
+        .comment-section h3 {
+            margin-bottom: 20px;
+        }
+        .comment {
+            background-color: #fff;
+            padding: 10px;
+            margin-bottom: 10px;
+            border-radius: 4px;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+        }
+        .footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 1rem;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Welcome to Our Impressive Blog</h1>
+        <p>Where Lorem Ipsum Meets Inspiration</p>
+    </header>
+    <div class="blog-post">
+        <h2 class="blog-title">Lorem Ipsum Blog Post 1</h2>
+        <p class="blog-meta">Posted on January 1, 2024 by John Doe</p>
+        <div class="blog-content">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed in nisi ultrices, efficitur tortor in, ullamcorper odio. Nullam eget justo a odio viverra accumsan. Integer ut felis at felis hendrerit ultricies. Cras ullamcorper dui ac quam bibendum volutpat. Vivamus sed libero sit amet ex facilisis mattis ut et libero.</p>
+        </div>
+        <!-- Comment Section -->
+        <div class="comment-section">
+            <h3>Comments</h3>
+            <div id="comments"></div>
+        </div>
+    </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            fetch('comments.txt')
+                .then(response => response.text())
+                .then(text => {
+                    const commentsContainer = document.getElementById('comments');
+                    // Assuming each comment is on a new line in the comments.txt file
+                    const comments = text.split('\n');
+                    comments.forEach(comment => {
+                        if (comment.trim() !== '') {
+                            const commentElement = document.createElement('div');
+                            commentElement.classList.add('comment');
+                            commentElement.textContent = comment;
+                            commentsContainer.appendChild(commentElement);
+                        }
+                    });
+                })
+                .catch(error => {
+                    console.error('Failed to load comments:', error);
+                });
+        });
+    </script>
+</body>
+</html>

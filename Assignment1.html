@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>My Tinder Profile?</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Assignment1.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="Assignment1dark.css" id="dark-theme-stylesheet">
+</head>
+<body>
+    <div id="homepage">
+        <header>
+            <nav class="navbar">
+                <select id="nav-dropdown" class="nav-dropdown">
+                    <option value="">Select a Page</option>
+                    <option value="#Aboutme">About Me</option>
+                    <option value="#Education">Education</option>
+                    <option value="#Achievements">Achievements</option>
+                    <option value="#Skills">Skills</option>
+                    <option value="#Blogs">Blogs</option>
+                </select>
+                <div class="nav-menu">
+                    <a href="#Aboutme">About Me</a>
+                    <a href="#Education">Education</a>
+                    <a href="#Achievements">Achievements</a>
+                    <a href="#Skills">Skills</a>
+                    <a href="#Blogs">Blogs</a>
+                </div>
+                <button id="toggleThemeBtn" class="toggle-theme">Toggle Theme</button>
+            </nav>
+            <div class="profile-picture-container">
+                <div class="profile-picture">
+                    <img src="Profilepicture.jpg" alt="Profile Picture">
+                </div>
+            </div>
+        </header>
+        <div class="stars" id="stars"></div>
+        <div id="main-content">
+            <section id="Aboutme">
+            </section>
+            <section id="Education">
+            </section>
+            <section id="Achievements">
+            </section>
+            <section id="Skills">
+            </section>
+            <section id="Blogs">
+            </section>
+        </div>
+        <footer>
+            <div class="social-links">
+                <a href="https://github.com/KaiGrindelwald" target="_blank">
+                    <i class="fab fa-github"></i>
+                </a>
+                <a href="mailto:agyeyanegi@gmail.com">
+                    <i class="fas fa-envelope"></i>
+                </a>
+            </div>
+        </footer>
+    </div>
+    <script src="Assignment1.js"></script>
+</body>
+</html>
